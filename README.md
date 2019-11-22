@@ -10,7 +10,8 @@ Lets take the following image as example of the waveform of a recorded audio wit
 
 The first thing this script does is read wave data and convert all values into a positive number between 0 and 32768 (16 bits), and using this range the script algorithm takes a double thresshold value:
 
-* TOP (1-32768): defines where is the top level signal to be consider as "not-noise-signal"
+* MAX: Defines the level above all wave data values are selected as "posibly part of the white zone". In the image is the horizontal dashed line of the red area 
+* TOP: Defines the value beyond all wave data values are selected as "posibly not noise"
 * TASA (0.1-0.99): defines the amount of concurrent peaks ina segment to be considered "not-a-single-peak"
 
 Finally the selected secctions are exported as separated audio files.
